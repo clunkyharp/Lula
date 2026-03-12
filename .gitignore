@@ -87,6 +87,7 @@ metro-cache/
 **/ios/DerivedData/
 **/ios/.symlinks/
 **/ios/xcuserdata/
+**/ios/.xcode.env.local
 **/ios/*.xcworkspace
 !**/ios/*.xcworkspace/contents.xcworkspacedata
 

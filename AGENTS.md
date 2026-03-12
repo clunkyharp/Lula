@@ -113,3 +113,41 @@ A change is done only when:
 - Keep project status synchronized (`Backlog`, `Ready`, `In Progress`, `Blocked`, `Review`, `Done`).
 - Never start substantial implementation without an existing memory issue.
 - Prefer script automation via `scripts/agent-memory.sh`.
+
+## 12) Context Bootstrap Order (Required)
+
+`AGENTS.md` is the primary memory and instruction source for AI agents in this repository.
+
+Before coding, read files in this order:
+1. `AGENTS.md`
+2. `LLM_CONTEXT.md`
+3. `ARCHITECTURE.md`
+4. `API.md`
+5. `PROJECT_INDEX.md`
+6. Target folder `README.md`
+7. `TASK.md` (for active large task scope)
+
+Goal:
+- context = architecture + contracts + module intent
+- not random file sampling
+
+## 13) Project Overview Snapshot
+
+- Frontend: React Native + TypeScript
+- State management: Redux Toolkit
+- Backend: NestJS + TypeScript
+- Persistence target: PostgreSQL
+- Shared contracts: `offline-pet-contracts`
+
+## 14) Core Architecture Rules
+
+- Components must be functional.
+- Business logic belongs in hooks/services/store layers, not in presentational components.
+- API calls only in dedicated API/service layers.
+- Server is authoritative for game rules and rewards.
+
+## 15) Coding Rules Snapshot
+
+- Prefer named exports; avoid default exports except framework-required entrypoints.
+- Prefer arrow functions in new TypeScript/React code where practical.
+- Keep TypeScript strict mode enabled across packages.
